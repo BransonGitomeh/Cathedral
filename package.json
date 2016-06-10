@@ -18,8 +18,7 @@
     "dev": "nodemon lib/start.js --exec babel-node lib/start.js --presets es2015,stage-2",
     "test": "mocha --compilers js:babel-register",
     "build": "babel lib -d dist --presets es2015,stage-2",
-    "prestart":"npm run build && cp -r lib/static/ dist/static/",
-    "start": "node --use_strict dist/start.js"
+    "start": "npm run build && cp -r lib/static/ dist/static/ && node --use_strict dist/start.js"
   },
   "dependencies": {
     "express": "^4.13.4"
